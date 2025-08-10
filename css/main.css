@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(260, 100%, 95%);
+    font-family: "Barlow Semi Condensed";
+    font-size: 13px;
+    position: relative;
+}
+
+.container {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+                "obj-1 obj-1 obj-2 obj-3"
+                "obj-4 obj-5 obj-5 obj-3";
+    gap: 20px;
+    margin: 20px 0px;
+}
+
+.container > div {
+    box-shadow: 4px 4px 10px #ddd, -4px -4px 10px #ddd;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+}
+
+.container .obj-3,
+.container .obj-4 {
+    background-color: white;
+    color: hsl(0, 0%, 7%);
+}
+
+.container .obj-1-1 {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    font-weight: 500;
+}
+
+.container .obj-1-1 .dtl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.container .obj-1-1 .dtl span {
+    width: 100%;
+    height: 50%;
+}
+
+.container .obj-1-1 img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container .disc {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.container .obj-1 {
+    grid-area: obj-1;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.container .obj-2 {
+    grid-area: obj-2;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.container .obj-3 {
+    grid-area: obj-3;
+}
+
+.container .obj-4 {
+    grid-area: obj-4;
+}
+
+.container .obj-5 {
+    grid-area: obj-5;
+    background-color: hsl(219, 29%, 14%);
+}

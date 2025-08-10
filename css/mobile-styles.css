@@ -1,0 +1,40 @@
+@media (max-width: 375px) {
+    .container {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0%);
+        height: fit-content;
+        width: 90%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+                    "obj-1"
+                    "obj-2"
+                    "obj-3"
+                    "obj-4"
+                    "obj-5";
+    }
+
+    .container .obj-1 {
+        grid-area: obj-1;
+    }
+
+    .container .obj-2 {
+        grid-area: obj-2;
+    }
+
+    .container .obj-3 {
+        grid-area: obj-5;
+    }
+
+    .container .obj-4 {
+        grid-area: obj-3;
+    }
+
+    .container .obj-5 {
+        grid-area: obj-4;
+    }
+}
